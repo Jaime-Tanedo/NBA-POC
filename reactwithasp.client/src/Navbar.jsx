@@ -1,16 +1,23 @@
-import { Link } from "react-router-dom";
-
-const Navbar = () => {
-    return (
-        <nav className="bg-blue-600 p-4 text-white flex justify-between items-center">
-            <h1 className="text-xl font-bold">MyApp</h1>
-            <ul className="flex gap-4">
-                <li><Link to="/" className="hover:underline">Home</Link></li>
-                <li><Link to="/counter" className="hover:underline">Counter</Link></li>
-                <li><Link to="/fetch-data" className="hover:underline">Fetch Data</Link></li>
-            </ul>
-        </nav>
-    );
+const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 };
 
-export default Navbar;
+export default function Navbar() {
+    return (
+        <nav className="fixed top-0 w-full bg-black text-white px-16 py-4 flex items-center justify-between shadow-lg text-lg">
+            <h1 className="text-7xl font-bold tracking-wide ">NBA</h1>
+
+            <div className="flex gap-8 pr-8">
+                <button onClick={() => scrollToSection("home")} className="hover:text-gray-400 transition">
+                    Home
+                </button>
+                <button onClick={() => scrollToSection("highlights")} className="hover:text-gray-400 transition">
+                    Highlights
+                </button>
+                <button onClick={() => scrollToSection("rumors")} className="hover:text-gray-400 transition">
+                    Rumors
+                </button>
+            </div>
+        </nav>
+    );
+}
