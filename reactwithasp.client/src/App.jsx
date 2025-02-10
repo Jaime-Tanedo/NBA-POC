@@ -2,8 +2,6 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Home from "./components/Home";
-import Counter from "./components/Counter";
-import FetchData from "./components/FetchData";
 
 function App() {
     return (
@@ -13,8 +11,6 @@ function App() {
                 <div className="flex-grow p-4">
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path="/counter" element={<Counter />} />
-                        <Route path="/fetch-data" element={<FetchData />} />
                     </Routes>
                 </div>
                 <Footer />
