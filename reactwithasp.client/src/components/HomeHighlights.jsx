@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 function HomeHighlights() {
     return (
-        <div className="flex flex-col items-center space-y-8 w-full">
+        <div className="flex flex-col items-center space-y-8">
+            
             {/* Main Video */}
             <iframe
                 width="870"
@@ -16,7 +17,7 @@ function HomeHighlights() {
             ></iframe>
 
             {/* Video Carousel */}
-            <div className="w-full max-w-6xl relative">
+            <div className="w-full max-w-7xl relative">
                 <div id="carousel" className="flex gap-6 pb-4 justify-center">
                     {/* Video Items */}
                     <iframe
